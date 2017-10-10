@@ -4,7 +4,7 @@ formatSpec = '%c' ;
 A  = fscanf(fileID,formatSpec);
 B = strsplit(A,';');
 
-xtemp = 3:3:length(B):
+xtemp = 3:3:length(B);
 temp = B(xtemp);
 
 xdate = 1:3:length(B);

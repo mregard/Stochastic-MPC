@@ -16,7 +16,7 @@ T4ref = 273.15+26;
 
 Cin = 1005;
 
-[temp, date, time] = GetData('mybetemp2015.txt');
+[temp, date, time] = GetData('mybetemp2017.txt');
 
 temp1 = temp(1:(7*24))';
 u = 1:length(temp1);
