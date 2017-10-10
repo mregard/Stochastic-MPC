@@ -26,7 +26,7 @@ Q       = 1;
 R       = 1;
 
 %simulation
-w           = randn(t_sim/T,1)*0;  %random disturbance on outside temperature
+w           = randn(t_sim/T,1);  %random disturbance on outside temperature
 x           = zeros(t_sim/T,1);         % room temperature
 u           = zeros(t_sim/T,1);         % room temperature
 v_bar       = ones(t_sim/T + H,1) *20;      % outside temp forecast
@@ -72,5 +72,12 @@ for i=2:1:t_sim/T
     z_old = [x(i), 0]
     
 end
+%%
+figure
+tt=1:t_sim/T;
+plot(tt,x_des*ones(length(tt),1),tt,x)
+legend('temperature ref','temperature actual')
+xlabel('time [h]')
+ylabel('room temperature [°C]')
+ylim([15 25])
 
-plot(x)
