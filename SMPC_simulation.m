@@ -3,6 +3,8 @@ close all
 clear all
 yalmip('clear')
 
+%TEST
+
 %general
 t_sim   = 24;  % simulation time (hours)
 T       = 1;    % sampling time (hours)
