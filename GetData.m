@@ -1,7 +1,7 @@
 function [ temp, date, time ] = GetData( file )
 fileID = fopen(file,'r');
 formatSpec = '%c' ;
-A  = fscanf(fileID,formatSpec);
+A  = fscanf(fileID,formatSpec,inf);
 B = strsplit(A,';');
 
 xtemp = 3:3:length(B);

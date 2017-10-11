@@ -1,0 +1,1 @@
+[temp, date, time] = GetData('test2.txt')

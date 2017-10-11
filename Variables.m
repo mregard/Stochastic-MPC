@@ -16,7 +16,7 @@ T4ref = 273.15+26;
 
 Cin = 1005;
 
-[temp, date, time] = GetData('mybetemp2017.txt');
+[temp, date, time] = GetData('test2.txt');
 
 temp1 = temp(1:(7*24))';
 u = 1:length(temp1);
@@ -29,10 +29,12 @@ I = 1;
 D = 0;
 Ts = 1/69;
 Tsamp = 1;
-test1 = temp(1)*ones(1,60);
+test1 = str2num(temp{1})*ones(1,60);
+
+
 for x = 2:length(temp1)
     
-     test1 = [test1 temp(x)*ones(1,60)];
+     test1 = [test1 str2num(temp{x})*ones(1,60)];
 end
 
 time = 0:1:length(test1)-1;
